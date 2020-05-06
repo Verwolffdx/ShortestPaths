@@ -103,6 +103,13 @@ function search_path()
 
   
   var node = document.querySelector('.dataEntry');
+
+  if(node.rows.length != 0) {
+    for (var i = node.rows.length -1; i >= 0; i -= 1) {
+      var row = node.deleteRow(i)
+    }
+  }
+
   for (var i = 0; i < size; i++) {
     var row = node.insertRow()
     var inputsRow = []
